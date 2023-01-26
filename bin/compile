@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir> <env-dir>
+
+set -exuo pipefail
+
+BUILD_DIR=${1:-}
+CACHE_DIR=${2:-}
+ENV_DIR=${3:-}
+
+cd $BUILD_DIR
+
+cd ai/service/text2img
+pip install -r requirements.txt
+cd -
+
+cd data/migrate_posts
+yarn install
+
+exit 0
