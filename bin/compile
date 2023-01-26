@@ -10,6 +10,7 @@ ENV_DIR=${3:-}
 cd $BUILD_DIR
 
 cd ai/service/text2img
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 cd -
 
