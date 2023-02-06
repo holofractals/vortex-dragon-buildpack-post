@@ -15,5 +15,10 @@ cd -
 
 cd data/migrate_posts
 yarn install
+cd -
+
+cd dragon
+bin/run ui # build ui and sync to rails public dir, etc
+cd -
 
 exit 0
