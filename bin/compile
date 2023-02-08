@@ -18,7 +18,17 @@ yarn install
 cd -
 
 cd dragon
-bin/run ui # build ui and sync to rails public dir, etc
+bin/run ui # build `world` ui and sync to rails public dir, etc
 cd -
+
+cd world
+rm -rf node_modules  # save space on slug
+cd -
+
+# save space on slug
+rm -rf archived spikes
+
+du -sh .
+du -sh *
 
 exit 0
