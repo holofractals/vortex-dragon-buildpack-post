@@ -26,7 +26,11 @@ rm -rf node_modules  # save space on slug
 cd -
 
 # save space on slug
-rm -rf archived spikes
+rm -rf \
+  archived \
+  doc \
+  node_modules \
+  spikes \
 
 du -sh .
 du -sh *
