@@ -18,7 +18,9 @@ yarn install
 cd -
 
 cd dragon
-BASE_URL=$(cat $ENV_DIR/BASE_URL) bin/run ui # build `world` ui and sync to rails public dir, etc
+PUBLIC_BASE_URL=$(cat $ENV_DIR/BASE_URL) \
+  PUBLIC_SECURE_LOGIN=$(cat $ENV_DIR/SECURE_LOGIN) \
+  bin/run ui # build `world` ui and sync to rails public dir, etc
 cd -
 
 cd world
